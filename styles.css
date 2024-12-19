@@ -1,0 +1,79 @@
+/* Configurar altura completa para html e body */
+html, body {
+    height: 100%;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos padrão */
+}
+
+/* O container ocupa toda a área da tela */
+.container {
+    width: 100%;
+    height: 100%; /* Agora ocupa toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fundo e tamanho da calculadora */
+.container-calculadora {
+    width: 300px;
+    height: 400px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-calculadora {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.input-calculadora input {
+    outline: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    background-color: #ddd;
+    text-align: right;
+    font-size: 1.5rem;
+    padding-right: 10px;
+}
+
+.btn-calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn-calculadora div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-calculadora .numero {
+    background-color: #4caf50;
+}
+
+.btn-calculadora .operador {
+    background-color: #2196f3;
+}
+
+.btn-calculadora .resultado {
+    background-color: #ff5722;
+    grid-column: span 4; /* Faz o botão de resultado ocupar toda a linha */
+}
+
+.btn-calculadora div:hover {
+    opacity: 0.9;
+}
